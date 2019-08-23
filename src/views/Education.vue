@@ -1,5 +1,5 @@
 <template>
-  <div class="education">
+  <div>
     <h1>Hello Education Vue</h1>
     <p>Vue have {{ stars }} stars on github</p>
   </div>

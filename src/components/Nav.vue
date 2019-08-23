@@ -1,14 +1,18 @@
 <template>
-  <div id="nav">
+  <nav class="fixed-top">
+    <div>
+      <router-link class="nav-logo " :to="{ name: 'home' }">
+        <img src="@/assets/esteve-logo.svg" height="40" alt="esteve_logo" />
+      </router-link>
+    </div>
     <ul>
       <li>
-        <router-link :to="{ name: 'home' }">HOME</router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'education' }">EDUCATION</router-link>
+        <router-link class="link-hover" :to="{ name: 'education' }">
+          EDUCATION
+        </router-link>
       </li>
     </ul>
-  </div>
+  </nav>
 </template>
 
 <script>
@@ -18,11 +22,45 @@ export default {
 </script>
 
 <style scoped>
-ul {
-  background: #333;
+nav {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0 1em;
+  background: white;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
 
-ul a {
-  color: white;
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.nav-logo {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+ul {
+  display: flex;
+  width: auto;
+  margin-left: auto;
+  list-style: none;
+}
+
+li {
+  margin: 0 1em;
+}
+
+li a {
+  color: black;
+  text-decoration: none;
+}
+
+.link-hover:hover {
+  color: gray;
 }
 </style>
