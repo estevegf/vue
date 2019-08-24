@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Nav class="container"/>
-    <router-view class="bar-margin container"/>
+    <Nav class="container" />
+    <router-view />
   </div>
 </template>
 
@@ -17,25 +17,29 @@ export default {
 </script>
 
 <style>
+body {
+  margin:0;
+}
+
 .bar-margin {
-  margin-top: 55px;
+  margin-top: 50px;
 }
 
 @media (min-width: 600px) {
   .container {
-    padding: 0 4em !important;
+    padding: 0 4em!important;
   }
 }
 
 @media (min-width: 800px) {
   .container {
-    padding: 0 8em !important;
+    padding: 0 8em!important;
   }
 }
 
 @media (min-width: 1100px) {
   .container {
-    padding: 0 12em !important;
+    padding: 0 12em!important;
   }
 }
 </style>
