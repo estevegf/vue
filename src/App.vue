@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <Nav class="container" />
+    <header>
+      <Nav class="container" />
+    </header>
     <router-view />
   </div>
 </template>
@@ -18,7 +20,7 @@ export default {
 
 <style>
 body {
-  margin:0;
+  margin: 0;
 }
 
 .bar-margin {
@@ -27,19 +29,25 @@ body {
 
 @media (min-width: 600px) {
   .container {
-    padding: 0 4em!important;
+    padding: 0 4em !important;
   }
 }
 
 @media (min-width: 800px) {
   .container {
-    padding: 0 8em!important;
+    padding: 0 8em !important;
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1300px) {
   .container {
-    padding: 0 12em!important;
+    padding: 0 14em !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .l-6 {
+    width: 50% !important;
   }
 }
 </style>
