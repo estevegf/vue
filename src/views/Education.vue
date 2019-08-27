@@ -1,9 +1,15 @@
 <template>
   <div>
-    <Banner class="bar-margin" image-url="/img/banner.svg"></Banner>
+    <Banner class="bar-margin" :image-url="educationBanner"></Banner>
     <div class="container">
-      <h1>Hello Education Vue</h1>
-      <p>Vue have {{ stars }} stars on github</p>
+      <h2>Education</h2>
+      <section class="center">
+        <Card
+          v-for="(edu, index) in education"
+          :key="index"
+          :education="edu"
+        ></Card>
+      </section>
     </div>
   </div>
 </template>
@@ -11,19 +17,21 @@
 <script>
 import ApiService from "../services/ApiService";
 import Banner from "../components/Banner";
+import Card from "../components/Card";
 
 export default {
-  components: { Banner },
+  components: { Card, Banner },
   data() {
     return {
-      stars: ""
+      education: [],
+      educationBanner: "/img/banner.svg"
     };
   },
   created() {
     ApiService.getInfo()
       .then(response => {
         console.log(response.data);
-        this.stars = response.data.stargazers_count;
+        this.education = response.data;
       })
       .catch(error => {
         console.log("There was an error:", error.response);

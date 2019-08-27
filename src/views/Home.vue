@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Banner class="bar-margin" image-url="/img/banner.svg"></Banner>
+    <Banner class="bar-margin" :image-url="homeBanner"></Banner>
     <div class="container">
       <section>
         <h2>Who am I?</h2>
@@ -16,7 +16,7 @@
           <div class="card l-6">
             <img
               class="circular"
-              src="/img/experience-esteve.svg"
+              :src="logoOne"
               height="120"
               alt="experience Funitec La Salle"
             />
@@ -33,7 +33,7 @@
           <div class="card l-6">
             <img
               class="circular"
-              src="/img/experience-esteve.svg"
+              :src="logoTwo"
               height="120"
               alt="experience Uniks"
             />
@@ -55,7 +55,14 @@
 <script>
 import Banner from "../components/Banner";
 export default {
-  components: { Banner }
+  components: { Banner },
+  data() {
+    return {
+      homeBanner: "/img/banner.svg",
+      logoOne: "/img/experience-esteve.svg",
+      logoTwo: "/img/experience-esteve.svg"
+    };
+  }
 };
 </script>
 
