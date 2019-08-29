@@ -3,10 +3,7 @@
     class="banner bar-margin"
     :style="{ backgroundImage: `url(${imageUrl})` }"
   >
-    <div class="banner-content">
-      <h1>@estevegf</h1>
-      <p>Hello from my web</p>
-    </div>
+    <div class="banner-content"></div>
   </section>
 </template>
 

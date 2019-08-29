@@ -11,7 +11,10 @@ export default new Router({
     {
       path: "/",
       name: "home",
-      component: Home
+      component: Home,
+      meta: {
+        title: "Home - Vue"
+      }
     },
     {
       path: "/education",
@@ -20,7 +23,10 @@ export default new Router({
       // this generates a separate chunk (education.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
-        import(/* webpackChunkName: "education" */ "./views/Education.vue")
+        import(/* webpackChunkName: "education" */ "./views/Education.vue"),
+      meta: {
+        title: "Education - Vue"
+      }
     }
   ]
 });

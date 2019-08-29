@@ -2,7 +2,7 @@
   <div>
     <Banner class="bar-margin" :image-url="educationBanner"></Banner>
     <div class="container">
-      <h2>Education</h2>
+      <h1>Education</h1>
       <section class="center">
         <Card
           v-for="(edu, index) in education"
@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       education: [],
-      educationBanner: "/img/banner.svg"
+      educationBanner: "/img/banner_education.jpg"
     };
   },
   created() {

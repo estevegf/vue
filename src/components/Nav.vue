@@ -2,12 +2,18 @@
   <nav class="fixed-top">
     <div>
       <router-link class="nav-logo " :to="{ name: 'home' }">
-        <img src="@/assets/esteve-logo.svg" height="40" alt="esteve_logo" />
+        <img src="/img/esteve-logo.svg" height="40" alt="esteve_logo" />
       </router-link>
     </div>
     <ul>
       <li>
         <router-link class="link-hover" :to="{ name: 'education' }">
+          <img
+            class="icon-nav"
+            src="/img/icono-education.svg"
+            height="18"
+            alt="education"
+          />
           EDUCATION
         </router-link>
       </li>
@@ -42,6 +48,7 @@ nav {
 .nav-logo {
   display: inline-block;
   margin-right: 1em;
+  padding: 6px 0 2px 0;
 }
 
 ul {
@@ -60,7 +67,15 @@ li a {
   text-decoration: none;
 }
 
+.icon-nav {
+  margin-right: 5px;
+}
+
+.link-hover {
+  display: flex;
+}
+
 .link-hover:hover {
-  color: gray;
+  opacity: 0.6;
 }
 </style>

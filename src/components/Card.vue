@@ -8,21 +8,22 @@
       />
     </div>
     <div class="s-6 card-right">
-      <p>
-        <strong>{{ education.school }}</strong>
-      </p>
-      <p>{{ education.age }}</p>
+      <div class="information">
+        <p>
+          <strong>{{ education.school }}</strong>
+        </p>
+        <p>{{ education.description }}</p>
+        <p>{{ education.age }}</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Education from "../models/Education";
-
 export default {
   name: "Card",
   props: {
-    education: new Education()
+    education: Object
   }
 };
 </script>
@@ -32,14 +33,19 @@ export default {
   display: inline-flex;
   width: 100%;
   align-items: center;
-  margin: 1em 0;
+  margin: 0 0 2em 0;
   background-color: gainsboro;
-  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
   border-radius: 5px;
 }
 
 .card-left {
   display: flex;
+}
+
+.information {
+  margin: 0.6em;
 }
 
 .card-image {

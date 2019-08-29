@@ -21,6 +21,7 @@ export default {
 <style>
 body {
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .bar-margin {
@@ -29,11 +30,13 @@ body {
 
 .container {
   padding: 0 1em;
+  font-size: small;
 }
 
 @media (min-width: 600px) {
   .container {
     padding: 0 4em !important;
+    font-size: medium;
   }
 }
 
@@ -46,6 +49,7 @@ body {
 @media (min-width: 1300px) {
   .container {
     padding: 0 14em !important;
+    font-size: large;
   }
 }
 
