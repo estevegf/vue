@@ -58,7 +58,7 @@ export default {
   components: { Banner },
   data() {
     return {
-      homeBanner: "/img/banner_home.jpg",
+      homeBanner: "/img/banner_home-1920.webp",
       logoOne: "/img/experience-funitec.svg",
       logoTwo: "/img/experience-uniks.svg"
     };

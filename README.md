@@ -33,3 +33,11 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Deployment
+- `npm run build`
+- `scp -r .\dist\ <user>@<domain>:/home/<user>`
+- `ssh <user>@<domain>`
+- `mv dist /var/www/<folder-domain>/vue-project`
+- `cd /var/www`
+- `sudo chown -R www-data:www-data <folder-domain>/`

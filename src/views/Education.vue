@@ -24,13 +24,12 @@ export default {
   data() {
     return {
       education: [],
-      educationBanner: "/img/banner_education.jpg"
+      educationBanner: "/img/banner_education-1920.webp"
     };
   },
   created() {
     ApiService.getInfo()
       .then(response => {
-        console.log(response.data);
         this.education = response.data;
       })
       .catch(error => {
