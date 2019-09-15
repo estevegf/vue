@@ -2,8 +2,8 @@
   <div class="card">
     <div class="s-6 card-left">
       <img
-        :src="education.img"
-        class="responsive card-image"
+        :data-src="education.img"
+        class="responsive card-image lazyload"
         :alt="education.school"
       />
     </div>
@@ -20,6 +20,8 @@
 </template>
 
 <script>
+import "lazysizes";
+
 export default {
   name: "Card",
   props: {
@@ -32,6 +34,7 @@ export default {
 .card {
   display: inline-flex;
   width: 100%;
+  min-height: 229px;
   align-items: center;
   margin: 0 0 2em 0;
   background-color: gainsboro;

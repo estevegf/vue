@@ -21,7 +21,7 @@ export default {
 <style>
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .bar-margin {
